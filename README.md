@@ -1,8 +1,8 @@
 # Free Blue Bikes Predictor
 
-An on-going project for real-time prediction of the number of available Bluebikes in 4 Bluebike stations near my home in Boston using machine learning.
+An on-going hobby application for making real-time predictions of the number of Bluebikes that will be available at 3 stations near my apartment in Boston using machine learning.
 
-Used Bluebike data of 2 years (2023 and 2024) of historical Bluebike trip data and weather data (temperature and precipitation).
+Used 14 months (2023 Dec to 2025 Jan) of historical Bluebike trip data and weather data (temperature and precipitation).
 
 ## Demo
 
@@ -14,4 +14,7 @@ I use Bluebikes regularly to get around. However, at times there are no availabl
 
 ## Project Info
 
-Bluebike historical data taken from Blue
+### Data Sources
+
+- [Official Bluebike Historical Trip Dataset](https://bluebikes.com/system-data)
+- [Hourly Weather Data](https://open-meteo.com/en/docs/historical-weather-api#latitude=52.52&longitude=13.41&hourly=temperature_2m,precipitation&daily=&models=)
