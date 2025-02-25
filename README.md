@@ -2,7 +2,7 @@
 
 An on-going hobby application for making real-time predictions of the number of Bluebikes that will be available at 3 stations near my apartment in Boston using machine learning.
 
-Used 14 months (2023 Dec to 2025 Jan) of historical Bluebike trip data and weather data (temperature and precipitation).
+For data, used 14 months (2023 Dec to 2025 Jan) of historical Bluebike trip data and weather data (temperature and precipitation) for prediction model.
 
 ## Demo
 
