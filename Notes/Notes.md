@@ -79,14 +79,23 @@ Since I want to build a simple model that just predicts the net departure vs arr
 
 ### Start
 
-I want to create a blue bike predictor that predicts the number of empty bikes in 3 bike stations near my home. To do so, I have 1 year worth of blue bike data, where it tells me all trip history (departure location, arrival destination, time and date for departure and arrival, and trip duration). My plan is to calculate the arrivals and departures in 10 minute intervals from the dataset to predict the net flow in every 10 minute interval for the year. I also plan to add historical temperature and precipitation to enhance my predictor. My predictor will predict future bike net flow based on weather forecast and past historical bike trips data, and potentially add in real-time data of available bikes in stations in the future.
+I want to create a blue bike predictor that predicts the number of departures and arrivals for 3 bike stations in 15 minute intervals. The main goal is to create an API that takes the time (minute, hour, day of week, month), temperature, and precipitation to make future predictions on number of arrivals and departures in that station.
 
-Is this a good approach? What should I consider?
+To do so, I have 1 year worth of blue bike trip data, where it tells me all trip history (departure location, arrival destination, time and date for departure and arrival, and trip duration), as well as 1 year worth of temperature and precipitation data.
 
-### Data Extraction
+Give me an approach to do this. All of this will be done in Python
+
+### Trip Data Aggregation
 
 To start with, I want to investigate the bike trip data. I have extracted all trip data from 2024 and combined them into a df called trip_data_df. In this df it has the relevant columns: started_at (datetime), ended_at (datetime), start_station_id (str), end_station_id (str).
 
 I have 3 bike stations I would like to make 3 separate availability predictors for, with station ids = ["A32012", "E32016", "D32035"]. I want to first filter the `trip_data_df` to get the stations of interest so that I can predict the departure vs arrival to estimate availability.
 
-Help me split the arrivals and departures seperately for each station into 15 minute intervals.
+### Trip Data Visualization
+
+
+
+### Data Correlation
+
+
+### 
