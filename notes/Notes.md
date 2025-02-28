@@ -75,6 +75,14 @@ The issue with solution 2 is that I potentially lose some important data that I 
 
 Since I want to build a simple model that just predicts the net departure vs arrivals, I will use solution 2.
 
+
+## Resources
+
+- [Bike Prediction Paper](https://ksiresearch.org/seke/dmsviva21paper/paper001.pdf)
+- [Bikeshare Prediction Chicago Example Project](https://github.com/dssg/bikeshare)
+- [Greenmov Blog post](https://green-mov.eu/blog/bike-availability-forecast)
+- [Scikit-Learn Doc using Lagged Features for Bike Sharing Dataset](https://scikit-learn.org/stable/auto_examples/applications/plot_time_series_lagged_features.html)
+
 ## AI Prompts
 
 ### Start
@@ -85,11 +93,17 @@ To do so, I have 1 year worth of blue bike trip data, where it tells me all trip
 
 Give me an approach to do this. All of this will be done in Python
 
-### Trip Data Aggregation
+### Trip Data Aggregation v1
 
 To start with, I want to investigate the bike trip data. I have extracted all trip data from 2024 and combined them into a df called trip_data_df. In this df it has the relevant columns: started_at (datetime), ended_at (datetime), start_station_id (str), end_station_id (str).
 
 I have 3 bike stations I would like to make 3 separate availability predictors for, with station ids = ["A32012", "E32016", "D32035"]. I want to first filter the `trip_data_df` to get the stations of interest so that I can predict the departure vs arrival to estimate availability.
+
+### Trip Data Aggregation v2
+
+To start with, I want to investigate the bike trip data. I have extracted all trip data from 2024 and combined them into a df called trip_data_df. In this df it has the relevant columns: started_at (datetime), ended_at (datetime), start_station_id (str), end_station_id (str).
+
+I have 3 bike stations I would like to make 3 separate availability predictors for, with station ids = ["A32012", "E32016", "D32035"]. I want to first filter the `trip_data_df` to get the stations of interest so that I can predict the departure vs arrival to estimate availability.2
 
 ### Trip Data Visualization
 
