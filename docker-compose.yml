@@ -1,0 +1,11 @@
+services:
+  flask-api:
+    build:
+      context: ./api/flask
+      dockerfile: Dockerfile
+    container_name: flask_api_container
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./api/flask:/app
+    restart: always
