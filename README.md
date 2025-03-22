@@ -4,6 +4,8 @@ An application for making future predictions of the number of Bluebikes that wil
 
 See application [here](https://bluebikepredictor.jyylab.com)
 
+<!-- ## Preview -->
+
 ## Project Motivation
 
 I use Bluebikes regularly to get around. However, at times there are no available blue bikes in specific stations. So, I made this project for fun and for learning to gain some insights into the commuting patterns for blue bikes near my home and make a predictor so that I know when and which stations are likely to have available bikes when I leave my home.
@@ -34,3 +36,11 @@ Using the forecasted arrivals and departures from the models, I can calculate th
 ### API
 
 After building and training the model, I used Flask to create an API to deploy the model. The API takes the inputs needed for the model (ie. minute, hour, temperature, etc), feeds it to the model, and returns the forecasts.
+
+### Front-End
+
+Built a simple React application to display predictions from API as well as other data (eg. display EDA visualizations).
+
+### Deployment
+
+Used Docker to containerize the API and front-end, deployed with Terraform on AWS EC2 instance.
