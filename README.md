@@ -2,7 +2,7 @@
 
 An application for making future predictions of the number of Bluebikes that will be available at 3 stations near my apartment in Boston using machine learning.
 
-See application [here](https://bluebikepredictor.jyylab.com)
+See application [here](https://bluebikepredictor.jyylab.com).
 
 ## Preview
 
@@ -33,7 +33,7 @@ Below are the sources to the data:
 
 I created an arrival and departure prediction model for each station. Each prediction model takes inputs of time (minute, hour, day, month) and weather (temperature and precipitation) to estimate the number of arrivals and departures for each station in intervals.
 
-Using the forecasted arrivals and departures from the models, I can calculate the net flow (arrivals - departures), grab the live number of available bikes in a station from Bluebike's API, then combine these to calculate how many bikes will depart/arrive to/from the station in the next few time intervals.
+Using the forecasted arrivals and departures from the models, I can calculate the net flow (arrivals - departures), grab the live number of available bikes in a station from Bluebike's API, then combine these to forecast how many bikes and docks will be available in the next hour.
 
 ### API
 
@@ -41,8 +41,16 @@ After building and training the model, I used Flask to create an API to deploy t
 
 ### Front-End
 
-Built a simple React application to display predictions from API as well as other data (eg. display EDA visualizations).
+Built a simple React application to display predictions from API.
 
 ### Deployment
 
-Used Docker to containerize the API and front-end, deployed with Terraform on AWS EC2 instance.
+Used Docker to containerize the Flask API on an EC2 instance and S3 to host the front-end, all deployed with Terraform.
+
+## Web Application Architecture
+
+![Diagram](./assets/BasicApplicationDiagram.png)
+
+## ETL Pipeline
+
+Todo, plan on updating model monthly/quarterly so will build data pipeline.
