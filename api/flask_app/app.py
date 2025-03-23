@@ -1,5 +1,5 @@
 from flask import Flask, jsonify #, render_template
-# from flask_cors import CORS
+from flask_cors import CORS
 import pandas as pd
 import numpy as np
 import pickle
@@ -11,7 +11,7 @@ import pytz
 est = pytz.timezone("America/New_York")
 
 app = Flask(__name__)
-# CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 station_ids = ['A32012', 'E32016', 'D32035']
 station_external_ids = {"f8348136-0de8-11e7-991c-3863bb43a7d0": "A32012", 
