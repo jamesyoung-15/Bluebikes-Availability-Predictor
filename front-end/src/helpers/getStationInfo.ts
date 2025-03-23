@@ -74,7 +74,7 @@ export const getStationInfo = async (): Promise<Record<string, StationInfo>> => 
     const stationDetails: Record<string, StationInfo> = {};
 
     stations.forEach((station:lyftSingleStationData) => {
-      console.log(station);
+      // console.log(station);
       const internalId = stationExternalIds[station.station_id];
       if (internalId) {
         stationDetails[internalId] = {
