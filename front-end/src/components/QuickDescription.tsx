@@ -1,5 +1,6 @@
 import React from "react";
 import BikeStationPic from "../assets/Bike_Availability_Forecast_1.jpg";
+import BasicApplicationDiagram from "../assets/BasicApplicationDiagram.png"
 
 const QuickDescription: React.FC = () => {
   return (
@@ -39,8 +40,9 @@ const QuickDescription: React.FC = () => {
                     <p>
                     I used the gradient boosting regression model HistGradientBoostingRegressor from Scikit-Learn and trained the model with recorded historical bike rides, temperature, and precipitation data to forecast each station's arrivals and departures.
                     </p>
-                    <p>
+                    <p className="my-2">
                         The model takes the following features: temperature, precipiation, month, day of week, hour, minute as inputs. It outputs the number of bikes arriving and departing at each station.
+                        See <a href="https://github.com/jamesyoung-15/Bluebikes-Availability-Predictor/blob/main/notebook/ml-bike-predictor.ipynb" target="_blank" className="text-indigo-600 hover:text-indigo-500 my-1"> here </a> for the model training notebook.
                     </p>
                 </li>
                 <li>
@@ -50,6 +52,22 @@ const QuickDescription: React.FC = () => {
                 Then, I pull the current station information (eg. number of available bikes and docks) from the Bluebikes API and combine it with the model's predictions to get the final forecast.
                 </p>
                 </li>
+                <li>
+                <span className="font-semibold">Web Application</span>
+                <p>
+                I built a simple web application to display the forecasts for each station. The backend is build with Flask API and deployed with Docker on an EC2 instance. The frontend is built with React and Tailwind CSS and deployed to an S3 bucket.
+                </p>
+                </li>
+                <div className="flex justify-center mb-5">
+                    <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img
+                        src={BasicApplicationDiagram}
+                        alt="Random Pic"
+                        className="w-full object-cover"
+                    />
+                    {/* <p className="p-4 text-gray-700 text-center">Data Flow Diagram</p> */}
+                    </div>
+                </div>
             </ol>
             <h3 className="text-xl font-semibold text-blue-600 mb-4">More Info</h3>
             <p className="text-gray-700 text-lg leading-relaxed mb-6">

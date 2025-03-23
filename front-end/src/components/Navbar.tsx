@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    // { id: "https://github.com/jamesyoung-15/Bluebikes-Availability-Predictor/", text: "About Project", target: true},
+    { id: "https://github.com/jamesyoung-15/Bluebikes-Availability-Predictor/blob/main/notebook/ml-bike-predictor.ipynb", text: "Jupyter Notebook", target: true},
     { id: "https://github.com/jamesyoung-15/Bluebikes-Availability-Predictor/", text: "Source Code", target: true},
   ];
 

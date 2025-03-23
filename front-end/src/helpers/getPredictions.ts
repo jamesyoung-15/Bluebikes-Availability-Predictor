@@ -6,7 +6,7 @@ type PredictionsResponse = {
 };
 
 export const getPredictions = async (): Promise<PredictionsResponse> => {
-  const predictionApiUrl = "http://localhost:5000/v1"; // Replace with actual API URL
+  const predictionApiUrl = "https://apibluebikespredictor.jyylab.com/v1"; // Replace with actual API URL
 
   try {
     const response = await fetch(predictionApiUrl);
