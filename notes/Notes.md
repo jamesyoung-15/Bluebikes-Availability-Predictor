@@ -88,7 +88,4 @@ Since I want to build a simple model that just predicts the net departure vs arr
 
 ## Resources
 
-- [Bike Prediction Paper](https://ksiresearch.org/seke/dmsviva21paper/paper001.pdf)
-- [Bikeshare Prediction Chicago Example Project](https://github.com/dssg/bikeshare)
-- [Greenmov Blog post](https://green-mov.eu/blog/bike-availability-forecast)
-- [Scikit-Learn Doc using Lagged Features for Bike Sharing Dataset](https://scikit-learn.org/stable/auto_examples/applications/plot_time_series_lagged_features.html)
+See [here](./Resources.md).
