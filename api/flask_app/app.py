@@ -1,9 +1,9 @@
+from datetime import datetime, timedelta
 from flask import Flask, jsonify #, render_template
 from flask_cors import CORS
+import pickle
 import pandas as pd
 import numpy as np
-import pickle
-from datetime import datetime, timedelta
 import requests
 import pytz
 
@@ -14,8 +14,8 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 station_ids = ['A32012', 'E32016', 'D32035']
-station_external_ids = {"f8348136-0de8-11e7-991c-3863bb43a7d0": "A32012", 
-                        "fae99a0c-e88a-4112-94d8-f655cf34e651": 'E32016', 
+station_external_ids = {"f8348136-0de8-11e7-991c-3863bb43a7d0": "A32012",
+                        "fae99a0c-e88a-4112-94d8-f655cf34e651": 'E32016',
                         "bb27977d-36c1-496d-8bac-631b612dd7b8": "D32035"}
 
 station_names = {   "A32012" : "Packard's Corner - Commonwealth Ave at Brighton Ave",
@@ -27,7 +27,6 @@ def load_models():
     Loads trained models for each station
     Returns a dictionary with model objects 
     """
-    station_ids = ['A32012', 'E32016', 'D32035']
     models = {}
 
     for station_id in station_ids:
@@ -56,7 +55,6 @@ def round_to_nearest(dt, interval_minutes=15):
         return dt.replace(day=dt.day+1, hour=0, minute=0, second=0, microsecond=0)
     if minute == 60:
         return dt.replace(hour=dt.hour+1, minute=0, second=0, microsecond=0)
-    
     return dt.replace(minute=minute, second=0, microsecond=0)
 
 def generate_future_intervals(num_intervals=4, interval_minutes=15):

@@ -1,5 +1,5 @@
-from app import app as application
 from werkzeug.middleware.proxy_fix import ProxyFix
+from app import app as application
 
 app = application
 
