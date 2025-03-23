@@ -1,13 +1,17 @@
 from flask import Flask, jsonify #, render_template
-from flask_cors import CORS
+# from flask_cors import CORS
 import pandas as pd
 import numpy as np
 import pickle
 from datetime import datetime, timedelta
 import requests
+import pytz
+
+# Boston time zone (EST), convert the current UTC time to EST
+est = pytz.timezone("America/New_York")
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "apibluebikespredictor.jyylab.com, localhost:5000, bluebikespredictor.jyylab.com"}})
+# CORS(app, resources={r"/*": {"origins": "*"}})
 
 station_ids = ['A32012', 'E32016', 'D32035']
 station_external_ids = {"f8348136-0de8-11e7-991c-3863bb43a7d0": "A32012", 
@@ -60,7 +64,7 @@ def generate_future_intervals(num_intervals=4, interval_minutes=15):
     Generates list of current and future datetime objects at specified intervals
     Returns a list of datetime objects
     """
-    current_time = datetime.now()
+    current_time = datetime.now(est)
     start_time = round_to_nearest(current_time, interval_minutes)
     return [start_time + timedelta(minutes=i * interval_minutes) for i in range(num_intervals)]
 
