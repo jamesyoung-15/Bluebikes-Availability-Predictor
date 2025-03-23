@@ -4,7 +4,9 @@ An application for making future predictions of the number of Bluebikes that wil
 
 See application [here](https://bluebikepredictor.jyylab.com)
 
-<!-- ## Preview -->
+## Preview
+
+![Preview](./assets/web-demo.png)
 
 ## Project Motivation
 

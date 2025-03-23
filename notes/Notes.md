@@ -86,6 +86,71 @@ Since I want to build a simple model that just predicts the net departure vs arr
   - LSTM
   - TCN
 
+## API Responses
+
+### Prediction Model
+
+``` json
+  {
+      "A32012": {
+          "arrivals": [
+          1,
+          1,
+          1,
+          1
+          ],
+          "departures": [
+          1,
+          1,
+          1,
+          1
+          ]
+      },
+      "D32035": {
+          "arrivals": [
+          1,
+          1,
+          1,
+          1
+          ],
+          "departures": [
+          1,
+          1,
+          1,
+          1
+          ]
+      },
+      "E32016": {
+          "arrivals": [
+          0,
+          0,
+          0,
+          0
+          ],
+          "departures": [
+          0,
+          0,
+          0,
+          0
+          ]
+      },
+      "time_intervals": [
+          "22:15",
+          "22:30",
+          "22:45",
+          "23:00"
+      ]
+  }
+```
+
 ## Resources
 
 See [here](./Resources.md).
+
+## Troubleshooting
+
+Ran into error:
+
+`"Can't get attribute '__pyx_unpickle_CyHalfSquaredError' on <module 'sklearn._loss._loss' from '/usr/local/lib/python3.12/site-packages/sklearn/_loss/_loss.cpython-312-x86_64-linux-gnu.so'>"`
+
+To solve, run: `python -c "import sklearn; print(sklearn.__version__)"` to get the Python version used to train pickle model. Then make sure to edit `requirements.txt` to match version.
