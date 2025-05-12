@@ -24,3 +24,9 @@ npm run dev
 npm run build
 serve -s dist
 ```
+
+- If using S3 for front-end, sync to bucket:
+
+``` bash
+aws s3 sync ./dist s3://jyyoung.com --delete --profile Prod
+```
