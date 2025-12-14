@@ -2,8 +2,6 @@
 
 An application for making future predictions of the number of Bluebikes that will be available at 3 stations near my apartment in Boston using machine learning.
 
-See application [here](https://bluebikespredictor.jyylab.com).
-
 ## Preview
 
 ![Preview](./assets/web-demo.png)
